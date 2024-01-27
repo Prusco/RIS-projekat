@@ -1,7 +1,7 @@
 # Informacioni Sistem za Aviokompaniju (RIS)
 
 ## Pregled
-/
+
 Ovaj folder sadrži izvorni kod za Informacioni Sistem za Aviokompaniju (RIS projekat 2023/2024) razvijen za potrebe upravljanja letovima, pilotima, članovima posade i srodnim informacijama radi olakšavanja efikasnih operacija aviokompanije.
 
 ## Funkcionalnosti
