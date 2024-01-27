@@ -19,4 +19,4 @@ Ovaj folder sadrži izvorni kod za Informacioni Sistem za Aviokompaniju (RIS pro
 
 ## Napomena
 - Ovaj projekat u potpunosti nije urađen jer nema jos mogucnosti pretrage.
-- Također ako želite pokrenuti ovaj projekat na svom računaru trebate promjenuti unutar Klase KonekcijaBaza te upisati svoj username i password za konekciju sa bazompodataka
+- Također ako želite pokrenuti ovaj projekat na svom računaru trebate promjenuti unutar Klase KonekcijaBaza te upisati svoj username i password za konekciju sa bazom
