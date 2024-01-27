@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img_about.png" />
+    <None Remove="img_briiiisanje.png" />
+    <None Remove="img_dodavanje.png" />
+    <None Remove="img_exit.png" />
+    <None Remove="img_folder.png" />
+    <None Remove="img_home.png" />
+    <None Remove="img_search.png" />
+    <None Remove="img_setting.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img_about.png" />
+    <Resource Include="img_briiiisanje.png" />
+    <Resource Include="img_dodavanje.png" />
+    <Resource Include="img_exit.png" />
+    <Resource Include="img_folder.png" />
+    <Resource Include="img_home.png" />
+    <Resource Include="img_search.png" />
+    <Resource Include="img_setting.png" />
+  </ItemGroup>
+
+</Project>
