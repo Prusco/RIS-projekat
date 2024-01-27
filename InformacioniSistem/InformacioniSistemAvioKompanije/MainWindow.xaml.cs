@@ -561,7 +561,7 @@ namespace InformacioniSistemAvioKompanije
                 Label labelUnutarDugmeta = new Label();
                 labelUnutarDugmeta.Content = $"Pretraga za {clickedButton.Content}";
                 stackPanel.Children.Add(labelUnutarDugmeta);
-                if (clickedButton.Content.ToString() == "Pilota")
+                if (clickedButton.Content.ToString() == "Pilot")
                 {
                     PilotService dbHelper = new PilotService();
 
@@ -578,7 +578,7 @@ namespace InformacioniSistemAvioKompanije
 
                     stackPanel.Children.Add(pilotListBox);
                 }
-                else if (clickedButton.Content.ToString() == "Aerodroma")
+                else if (clickedButton.Content.ToString() == "Aerodrom")
                 {
                     AerodromService service = new AerodromService();
                     List<Aerodrom> aerodroms = service.GetAerodrome();
@@ -604,17 +604,19 @@ namespace InformacioniSistemAvioKompanije
                     }
                     stackPanel.Children.Add(listastjuardesa);
                 }
-                else if (clickedButton.Content.ToString() == "Letova")
+                else if (clickedButton.Content.ToString() == "Letovi")
                 {
                     LetServise service = new LetServise();
-                    List<Let> lets = service.GetLetovi();
+                    List<(string ImeAerodromaPolaska, string ImeAerodromaDolaska)> imenaAerodroma = service.GetAllLetovi();
 
                     ListBox listaletova = new ListBox();
-                    listaletova.DisplayMemberPath = "ImeLeta";
-                    foreach (var let in lets)
+
+                    foreach (var imeAerodroma in imenaAerodroma)
                     {
-                        listaletova.Items.Add(let);
+                        string imeLeta = $"{imeAerodroma.ImeAerodromaPolaska} - {imeAerodroma.ImeAerodromaDolaska}";
+                        listaletova.Items.Add(imeLeta);
                     }
+
                     stackPanel.Children.Add(listaletova);
                 }
             }
