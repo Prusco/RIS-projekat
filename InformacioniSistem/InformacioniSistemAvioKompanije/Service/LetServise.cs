@@ -45,6 +45,47 @@ namespace InformacioniSistemAvioKompanije.Service
             }
 
         }
+        public List<(string ImeAerodromaPolaska, string ImeAerodromaDolaska)> GetAllLetovi()
+        {
+            List<(string ImeAerodromaPolaska, string ImeAerodromaDolaska)> imenaAerodroma = new List<(string, string)>();
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string sqlQuery = @"
+                SELECT
+                    aerodromPolaska.Ime AS ImeAerodromaPolaska,
+                    aerodromDolaska.Ime AS ImeAerodromaDolaska
+                FROM
+                    letovi
+                JOIN aerodrom AS aerodromPolaska ON letovi.AerodromIDPolaska = aerodromPolaska.idAerodrom
+                JOIN aerodrom AS aerodromDolaska ON letovi.AerodromIDDolaska = aerodromDolaska.idAerodrom;
+            ";
+
+                    using (MySqlCommand cmd = new MySqlCommand(sqlQuery, connection))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string imeAerodromaPolaska = reader["ImeAerodromaPolaska"].ToString();
+                                string imeAerodromaDolaska = reader["ImeAerodromaDolaska"].ToString();
+                                imenaAerodroma.Add((imeAerodromaPolaska, imeAerodromaDolaska));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting ImenaAerodroma from database: {ex.Message}");
+            }
+
+            return imenaAerodroma;
+        }
 
         public List<Let> GetLetovi()
         {
