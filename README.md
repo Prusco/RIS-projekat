@@ -22,7 +22,8 @@ Ovaj folder sadrži izvorni kod za Informacioni Sistem za Aviokompaniju (RIS pro
 - Također ako želite pokrenuti ovaj projekat na svom računaru trebate promjenuti unutar Klase KonekcijaBaza te upisati svoj username i password za konekciju sa bazom
 ## Upustvo za instalaciju i korištenje aplikacije
 - U ovom projektu za korištenje ove aplikacije Vam je potrebno jedno od razvojnih okruženja koji koristi C# WPF tehnologije, preporucujem Visual Studio 2022, i MySQL Server sa MySQL Workbench za koristenje 
-  skripte unutar file-a. U sljedećoj poruci se nalaze linkovi za download:
+  skripte unutar file-a.
+- U sljedećoj poruci se nalaze linkovi za download:
 - Visual Studio 2022 : https://visualstudio.microsoft.com/vs/
 - MySQL Server : https://dev.mysql.com/downloads/mysql/
 - MySQL Workbench : https://dev.mysql.com/downloads/workbench/
