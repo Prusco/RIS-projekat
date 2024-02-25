@@ -18,7 +18,7 @@ Ovaj folder sadrži izvorni kod za Informacioni Sistem za Aviokompaniju (RIS pro
 - WPF (Windows Presentation Foundation) za korisnički interfejs
 
 ## Napomena
-- Ovaj projekat u potpunosti nije urađen jer nema jos mogucnosti pretrage.
+- Ovaj projekat u potpunosti nije urađen jer nema jos mogucnosti pretrage, te je moguci prototip.
 - Također ako želite pokrenuti ovaj projekat na svom računaru trebate promjenuti unutar Klase KonekcijaBaza te upisati svoj username i password za konekciju sa bazom
 ## Upustvo za instalaciju i korištenje aplikacije
 - U ovom projektu za korištenje ove aplikacije Vam je potrebno jedno od razvojnih okruženja koji koristi C# WPF tehnologije, preporucujem Visual Studio 2022, i MySQL Server sa MySQL Workbench za koristenje 
